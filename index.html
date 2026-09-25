@@ -2,14 +2,13 @@
 <html lang="fr">
 
 <head>
-
     <meta charset="UTF-8">
 
     <meta name="viewport"
           content="width=device-width, initial-scale=1.0">
 
     <meta name="description"
-          content="P.A.F. — Parti Anarchiste Français, mouvement politique fictif de Seine-et-Marne.">
+          content="P.A.F. — Parti Amical Français, mouvement politique fictif de Seine-et-Marne.">
 
     <title>P.A.F. — Parti Amical Français</title>
 
@@ -63,12 +62,9 @@
 
         nav {
             position: fixed;
-
             top: 0;
             left: 0;
-
             width: 100%;
-
             z-index: 1000;
 
             display: flex;
@@ -78,7 +74,6 @@
             padding: 18px 6%;
 
             background: rgba(7, 7, 7, 0.92);
-
             backdrop-filter: blur(12px);
 
             border-bottom: 1px solid #222;
@@ -87,7 +82,6 @@
         .nav-logo {
             font-size: 27px;
             font-weight: 900;
-
             letter-spacing: -2px;
         }
 
@@ -97,19 +91,14 @@
 
         nav ul {
             display: flex;
-
             gap: 25px;
-
             list-style: none;
         }
 
         nav ul a {
             text-decoration: none;
-
             font-size: 14px;
-
             font-weight: bold;
-
             transition: 0.2s;
         }
 
@@ -132,15 +121,11 @@
         ========================= */
 
         .hero {
-
             min-height: 100vh;
 
             display: flex;
-
             flex-direction: column;
-
             justify-content: center;
-
             align-items: center;
 
             text-align: center;
@@ -156,13 +141,9 @@
         }
 
         .hero-logo {
-
             font-size: clamp(90px, 20vw, 210px);
-
             font-weight: 900;
-
             letter-spacing: -14px;
-
             line-height: 1;
         }
 
@@ -171,22 +152,15 @@
         }
 
         .hero h2 {
-
             margin-top: 25px;
-
             font-size: clamp(20px, 4vw, 42px);
-
             letter-spacing: 3px;
         }
 
         .hero p {
-
             max-width: 700px;
-
             margin: 25px auto;
-
             color: var(--grey);
-
             font-size: 18px;
         }
 
@@ -200,50 +174,38 @@
         }
 
         .button {
-
             display: inline-block;
 
             padding: 14px 28px;
-
             margin: 7px;
 
             background: var(--blue);
-
             color: white;
 
             text-decoration: none;
-
             font-weight: bold;
 
             border-radius: 5px;
-
             border: none;
 
             font-size: 15px;
-
             cursor: pointer;
 
             transition: 0.2s;
-
             font-family: inherit;
         }
 
         .button:hover {
-
             background: var(--blue-light);
-
             transform: translateY(-3px);
         }
 
         .button-outline {
-
             background: transparent;
-
             border: 1px solid var(--blue);
         }
 
         .button-outline:hover {
-
             background: var(--blue);
         }
 
@@ -253,32 +215,23 @@
         ========================= */
 
         section {
-
             max-width: 1100px;
-
             margin: auto;
-
             padding: 110px 25px;
         }
 
         .section-title {
-
             font-size: clamp(35px, 5vw, 55px);
-
             margin-bottom: 15px;
         }
 
         .section-title span {
-
             color: var(--blue);
         }
 
         .section-intro {
-
             max-width: 720px;
-
             color: var(--grey);
-
             margin-bottom: 45px;
         }
 
@@ -288,7 +241,6 @@
         ========================= */
 
         .grid {
-
             display: grid;
 
             grid-template-columns:
@@ -298,41 +250,32 @@
         }
 
         .card {
-
             padding: 30px;
 
             background: var(--card);
 
             border: 1px solid var(--border);
-
             border-radius: 8px;
 
             transition: 0.25s;
         }
 
         .card:hover {
-
             transform: translateY(-5px);
-
             border-color: var(--blue);
         }
 
         .card-icon {
-
             font-size: 36px;
-
             margin-bottom: 15px;
         }
 
         .card h3 {
-
             font-size: 22px;
-
             margin-bottom: 10px;
         }
 
         .card p {
-
             color: var(--grey);
         }
 
@@ -342,7 +285,6 @@
         ========================= */
 
         .manifesto {
-
             padding: 35px;
 
             background: #121212;
@@ -351,9 +293,7 @@
         }
 
         .manifesto p {
-
             color: #ccc;
-
             margin-bottom: 15px;
         }
 
@@ -363,7 +303,6 @@
         ========================= */
 
         .melenchon {
-
             max-width: none;
 
             background:
@@ -374,40 +313,32 @@
                 );
 
             border-top: 1px solid #001a30;
-
             border-bottom: 1px solid #001a30;
         }
 
         .melenchon-content {
-
             max-width: 1100px;
-
             margin: auto;
         }
 
         .support-box {
-
             padding: 35px;
 
             background: rgba(255,255,255,0.03);
 
             border: 1px solid #10203b;
-
             border-radius: 8px;
         }
 
         .support-label {
-
             display: inline-block;
 
             background: var(--blue);
 
             padding: 6px 11px;
-
             margin-bottom: 15px;
 
             font-size: 12px;
-
             font-weight: bold;
         }
 
@@ -417,6 +348,7 @@
         ========================= */
 
         .palestine {
+            max-width: none;
 
             background:
                 linear-gradient(
@@ -424,22 +356,11 @@
                     #050505,
                     #111111
                 );
-
-            max-width: none;
         }
 
         .palestine-content {
-
             max-width: 1100px;
-
             margin: auto;
-        }
-
-        .flag {
-
-            font-size: 70px;
-
-            margin-bottom: 10px;
         }
 
 
@@ -448,18 +369,14 @@
         ========================= */
 
         .links {
-
             display: grid;
-
             gap: 12px;
         }
 
         .link {
-
             display: flex;
 
             align-items: center;
-
             justify-content: space-between;
 
             padding: 20px;
@@ -474,16 +391,12 @@
         }
 
         .link:hover {
-
             border-color: var(--blue);
-
             padding-left: 28px;
         }
 
         .arrow {
-
             color: var(--blue);
-
             font-size: 22px;
         }
 
@@ -493,7 +406,6 @@
         ========================= */
 
         .join {
-
             max-width: none;
 
             text-align: center;
@@ -504,55 +416,40 @@
         }
 
         .join-content {
-
             max-width: 800px;
-
             margin: auto;
         }
 
         .join h2 {
-
             font-size: clamp(38px, 6vw, 65px);
-
             margin-bottom: 20px;
         }
 
         .join p {
-
             max-width: 650px;
-
             margin: 15px auto;
         }
 
         .join .button {
-
             background: white;
-
             color: black;
         }
 
         .join .button-outline {
-
             background: transparent;
-
             color: white;
-
             border-color: white;
         }
 
         .join .button-outline:hover {
-
             background: white;
-
             color: black;
         }
 
         .subscriber-count {
-
             display: inline-block;
 
             margin-top: 25px;
-
             padding: 10px 20px;
 
             background: rgba(0,0,0,0.2);
@@ -563,7 +460,6 @@
         }
 
         .subscriber-count strong {
-
             font-size: 18px;
         }
 
@@ -573,7 +469,6 @@
         ========================= */
 
         footer {
-
             padding: 45px 25px;
 
             text-align: center;
@@ -584,32 +479,26 @@
         }
 
         footer strong {
-
             color: white;
         }
 
         .legal {
-
             max-width: 700px;
-
             margin: 20px auto 0;
 
             font-size: 12px;
-
             color: #555;
         }
 
 
         /* =========================
-           MODAL (CONNEXION)
+           MODAL
         ========================= */
 
         .modal-overlay {
-
             display: none;
 
             position: fixed;
-
             inset: 0;
 
             background: rgba(0,0,0,0.75);
@@ -617,27 +506,22 @@
             z-index: 2000;
 
             align-items: center;
-
             justify-content: center;
 
             padding: 20px;
         }
 
         .modal-overlay.open {
-
             display: flex;
         }
 
         .modal {
-
             width: 100%;
-
             max-width: 420px;
 
             background: var(--dark);
 
             border: 1px solid var(--border);
-
             border-radius: 10px;
 
             padding: 35px;
@@ -646,31 +530,23 @@
         }
 
         .modal h3 {
-
             font-size: 24px;
-
             margin-bottom: 8px;
         }
 
         .modal .modal-sub {
-
             color: var(--grey);
-
             font-size: 14px;
-
             margin-bottom: 25px;
         }
 
         .modal-close {
-
             position: absolute;
 
             top: 18px;
-
             right: 20px;
 
             background: none;
-
             border: none;
 
             color: var(--grey);
@@ -681,14 +557,11 @@
         }
 
         .modal-close:hover {
-
             color: white;
         }
 
         .modal-tabs {
-
             display: flex;
-
             gap: 8px;
 
             margin-bottom: 22px;
@@ -697,9 +570,7 @@
         }
 
         .modal-tab {
-
             background: none;
-
             border: none;
 
             color: var(--grey);
@@ -707,7 +578,6 @@
             padding: 10px 4px;
 
             font-size: 14px;
-
             font-weight: bold;
 
             cursor: pointer;
@@ -718,30 +588,24 @@
         }
 
         .modal-tab.active {
-
             color: white;
-
             border-bottom-color: var(--blue);
         }
 
         .field {
-
             margin-bottom: 16px;
         }
 
         .field label {
-
             display: block;
 
             font-size: 13px;
-
             color: var(--grey);
 
             margin-bottom: 6px;
         }
 
         .field input {
-
             width: 100%;
 
             padding: 11px 13px;
@@ -749,25 +613,20 @@
             background: #1c1c1c;
 
             border: 1px solid var(--border);
-
             border-radius: 5px;
 
             color: white;
 
             font-size: 14px;
-
             font-family: inherit;
         }
 
         .field input:focus {
-
             outline: none;
-
             border-color: var(--blue);
         }
 
         .modal-error {
-
             display: none;
 
             background: rgba(224, 0, 0, 0.12);
@@ -786,35 +645,26 @@
         }
 
         .modal-error.show {
-
             display: block;
         }
 
         .modal-submit {
-
             width: 100%;
-
             margin: 6px 0 0;
         }
 
         .modal-success {
-
             text-align: center;
         }
 
         .modal-success .check {
-
             font-size: 46px;
-
             margin-bottom: 10px;
         }
 
         .modal-success p {
-
             color: var(--grey);
-
             font-size: 14px;
-
             margin-bottom: 22px;
         }
 
@@ -826,45 +676,36 @@
         @media (max-width: 700px) {
 
             nav {
-
                 padding: 15px 20px;
             }
 
             nav ul {
-
                 gap: 12px;
             }
 
             nav ul li:nth-child(n+3) {
-
                 display: none;
             }
 
             .hero-logo {
-
                 letter-spacing: -8px;
             }
 
             section {
-
                 padding: 75px 20px;
             }
 
             .link {
-
                 font-size: 14px;
             }
 
             .button {
-
                 width: 90%;
-
                 max-width: 350px;
             }
         }
 
     </style>
-
 </head>
 
 
@@ -908,7 +749,11 @@
         </li>
 
         <li id="nav-account-slot">
-            <a href="#adhesion" id="nav-adhesion-link">
+            <a
+                href="#adhesion"
+                id="nav-adhesion-link"
+                onclick="openJoinFlow(event)"
+            >
                 Adhérer
             </a>
         </li>
@@ -918,7 +763,6 @@
 </nav>
 
 
-
 <!-- =========================
      ACCUEIL
 ========================= -->
@@ -926,26 +770,22 @@
 <header class="hero" id="accueil">
 
     <div class="hero-logo">
-
         P<span>.</span>A<span>.</span>F
-
     </div>
 
     <h2>
-        PARTI ANARCHISTE FRANÇAIS
+        PARTI AMICAL FRANÇAIS
     </h2>
 
     <p>
-
-        Organisation politique de
-        Seine-et-Marne, créée autour de la
-        liberté, de la solidarité et de la participation des élèves.
-
+        Organisation politique fictive de Seine-et-Marne,
+        créée autour de la liberté, de la solidarité
+        et de la participation des élèves.
     </p>
 
     <div class="buttons">
 
-        
+        <a
             href="#positions"
             class="button"
         >
@@ -964,7 +804,6 @@
 </header>
 
 
-
 <!-- =========================
      POSITIONS
 ========================= -->
@@ -972,21 +811,16 @@
 <section id="positions">
 
     <h2 class="section-title">
-
         Nos <span>positions</span>
-
     </h2>
 
     <p class="section-intro">
-
         Les thèmes ci-dessous présentent
-        l'identité politique du P.A.F.
-
+        l'identité politique du P.A.F. fictif.
     </p>
 
 
     <div class="grid">
-
 
         <article class="card">
 
@@ -999,11 +833,10 @@
             </h3>
 
             <p>
-
                 Défense des libertés publiques,
                 de la liberté d'expression et
-                de la participation des élèves aux changements.
-
+                de la participation des élèves
+                aux changements.
             </p>
 
         </article>
@@ -1016,13 +849,14 @@
             </div>
 
             <h3>
-                Nous soutenons
+                Soutiens
             </h3>
 
             <p>
-
-                La campagne de Jean Luc Mélenchon pour les élections de 2027 ainsi que la palestine qui subit un génocide.
-
+                Cette présentation fictive indique
+                notamment un soutien politique à
+                Jean-Luc Mélenchon ainsi qu'une
+                solidarité avec la population palestinienne.
             </p>
 
         </article>
@@ -1039,11 +873,9 @@
             </h3>
 
             <p>
-
                 Défense de la solidarité sociale
                 et des droits fondamentaux des
                 populations civiles.
-
             </p>
 
         </article>
@@ -1060,20 +892,16 @@
             </h3>
 
             <p>
-
                 Réflexion autour de formes
                 d'organisation donnant davantage
                 de place aux décisions collectives.
-
             </p>
 
         </article>
 
-
     </div>
 
 </section>
-
 
 
 <!-- =========================
@@ -1083,32 +911,26 @@
 <section>
 
     <h2 class="section-title">
-
         Le <span>manifeste</span>
-
     </h2>
-
 
     <div class="manifesto">
 
         <p>
-
             Le P.A.F. est ici présenté comme
-            un mouvement politique en Seine-et-Marne.
-
+            un mouvement politique fictif situé
+            en Seine-et-Marne.
         </p>
 
         <p>
-
             Son projet repose sur la liberté
-            individuelle, la solidarité collective  et la participation démocratique.
-
+            individuelle, la solidarité collective
+            et la participation démocratique.
         </p>
 
     </div>
 
 </section>
-
 
 
 <!-- =========================
@@ -1123,53 +945,41 @@
     <div class="melenchon-content">
 
         <h2 class="section-title">
-
             Jean-Luc <span>Mélenchon</span>
-
         </h2>
-
 
         <div class="support-box">
 
             <span class="support-label">
-
                 SOUTIEN DÉCLARÉ DU P.A.F.
-
             </span>
 
-
             <p>
-
                 Consultez directement les sites
-                officiels pour connaître leurs
-                publications et positions.
-
+                officiels pour connaître les
+                publications et positions de
+                Jean-Luc Mélenchon et de
+                La France insoumise.
             </p>
-
 
             <div class="buttons">
 
-                
+                <a
                     href="https://melenchon.fr/"
                     target="_blank"
                     rel="noopener noreferrer"
                     class="button"
                 >
-
                     Site de Jean-Luc Mélenchon
-
                 </a>
 
-
-                
+                <a
                     href="https://lafranceinsoumise.fr/"
                     target="_blank"
                     rel="noopener noreferrer"
                     class="button button-outline"
                 >
-
                     La France insoumise
-
                 </a>
 
             </div>
@@ -1179,7 +989,6 @@
     </div>
 
 </section>
-
 
 
 <!-- =========================
@@ -1193,43 +1002,29 @@
 
     <div class="palestine-content">
 
-        <div class="flag">
-            🇵🇸
-        </div>
-
-
         <h2 class="section-title">
-
             Free <span>Palestine</span>
-
         </h2>
 
-
         <p class="section-intro">
-
             Le P.A.F. affirme sa solidarité
             avec la population palestinienne
             et son attachement à la protection
             des droits fondamentaux des civils.
-
         </p>
 
-
-        
+        <a
             href="https://www.france-palestine.org/"
             target="_blank"
             rel="noopener noreferrer"
             class="button"
         >
-
             France Palestine Solidarité
-
         </a>
 
     </div>
 
 </section>
-
 
 
 <!-- =========================
@@ -1239,29 +1034,21 @@
 <section id="liens">
 
     <h2 class="section-title">
-
         Liens & <span>ressources</span>
-
     </h2>
 
-
     <p class="section-intro">
-
         Ressources externes et sites officiels.
-
     </p>
-
 
     <div class="links">
 
-
-        
+        <a
             class="link"
             href="https://melenchon.fr/"
             target="_blank"
             rel="noopener noreferrer"
         >
-
             <span>
                 Jean-Luc Mélenchon — site officiel
             </span>
@@ -1269,17 +1056,15 @@
             <span class="arrow">
                 →
             </span>
-
         </a>
 
 
-        
+        <a
             class="link"
             href="https://lafranceinsoumise.fr/"
             target="_blank"
             rel="noopener noreferrer"
         >
-
             <span>
                 La France insoumise
             </span>
@@ -1287,17 +1072,15 @@
             <span class="arrow">
                 →
             </span>
-
         </a>
 
 
-        
+        <a
             class="link"
             href="https://www.france-palestine.org/"
             target="_blank"
             rel="noopener noreferrer"
         >
-
             <span>
                 Association France Palestine Solidarité
             </span>
@@ -1305,14 +1088,11 @@
             <span class="arrow">
                 →
             </span>
-
         </a>
-
 
     </div>
 
 </section>
-
 
 
 <!-- =========================
@@ -1330,15 +1110,12 @@
             Rejoindre le P.A.F.
         </h2>
 
-
         <p>
-
-            Pour adhérer au P.A.F., connectez-vous
-            ou créez un compte. Votre adhésion sera
-            ajoutée à notre compteur d'adhérents.
-
+            Pour rejoindre le P.A.F. fictif,
+            connectez-vous ou créez un compte.
+            Votre adhésion sera ajoutée au compteur
+            local d'adhérents.
         </p>
-
 
         <div class="buttons">
 
@@ -1346,24 +1123,24 @@
                 class="button"
                 onclick="openJoinFlow()"
             >
-
                 ✊ Adhérer au P.A.F.
-
             </button>
 
         </div>
 
         <div class="subscriber-count">
 
-            <strong id="subscriber-count-value">0</strong> adhérent(s) enregistré(s)
+            <strong id="subscriber-count-value">
+                0
+            </strong>
+
+            adhérent(s) enregistré(s)
 
         </div>
-
 
     </div>
 
 </section>
-
 
 
 <!-- =========================
@@ -1373,76 +1150,162 @@
 <footer>
 
     <p>
-
         <strong>
             P.A.F. — Parti Amical Français
         </strong>
-
     </p>
-
 
     <p>
-
         Seine-et-Marne · France
-
     </p>
 
-
     <p class="legal">
-
+        Projet fictif à vocation expérimentale.
+        Les comptes et le compteur d'adhérents
+        fonctionnent uniquement dans le navigateur
+        de l'utilisateur.
     </p>
 
 </footer>
 
 
-
 <!-- =========================
-     MODAL DE CONNEXION / INSCRIPTION
+     MODAL DE CONNEXION
 ========================= -->
 
-<div class="modal-overlay" id="auth-modal">
+<div
+    class="modal-overlay"
+    id="auth-modal"
+>
 
     <div class="modal">
 
-        <button class="modal-close" onclick="closeModal()">✕</button>
+        <button
+            class="modal-close"
+            onclick="closeModal()"
+        >
+            ✕
+        </button>
+
 
         <div id="modal-auth-view">
 
-            <h3>Espace adhérents</h3>
-            <p class="modal-sub">Connectez-vous ou créez un compte pour adhérer au P.A.F.</p>
+            <h3>
+                Espace adhérents
+            </h3>
+
+            <p class="modal-sub">
+                Connectez-vous ou créez un compte
+                pour rejoindre le P.A.F.
+            </p>
+
 
             <div class="modal-tabs">
-                <button class="modal-tab active" id="tab-login" onclick="switchTab('login')">Connexion</button>
-                <button class="modal-tab" id="tab-register" onclick="switchTab('register')">Créer un compte</button>
+
+                <button
+                    class="modal-tab active"
+                    id="tab-login"
+                    onclick="switchTab('login')"
+                >
+                    Connexion
+                </button>
+
+                <button
+                    class="modal-tab"
+                    id="tab-register"
+                    onclick="switchTab('register')"
+                >
+                    Créer un compte
+                </button>
+
             </div>
 
-            <div class="modal-error" id="modal-error"></div>
 
-            <form id="auth-form" onsubmit="handleAuthSubmit(event)">
+            <div
+                class="modal-error"
+                id="modal-error"
+            ></div>
+
+
+            <form
+                id="auth-form"
+                onsubmit="handleAuthSubmit(event)"
+            >
 
                 <div class="field">
-                    <label for="auth-email">Adresse e-mail</label>
-                    <input type="email" id="auth-email" required autocomplete="email">
+
+                    <label for="auth-email">
+                        Adresse e-mail
+                    </label>
+
+                    <input
+                        type="email"
+                        id="auth-email"
+                        required
+                        autocomplete="email"
+                    >
+
                 </div>
+
 
                 <div class="field">
-                    <label for="auth-password">Mot de passe</label>
-                    <input type="password" id="auth-password" required autocomplete="current-password" minlength="4">
+
+                    <label for="auth-password">
+                        Mot de passe
+                    </label>
+
+                    <input
+                        type="password"
+                        id="auth-password"
+                        required
+                        autocomplete="current-password"
+                        minlength="4"
+                    >
+
                 </div>
 
-                <button type="submit" class="button modal-submit" id="auth-submit-btn">Se connecter</button>
+
+                <button
+                    type="submit"
+                    class="button modal-submit"
+                    id="auth-submit-btn"
+                >
+                    Se connecter
+                </button>
 
             </form>
 
         </div>
 
-        <div id="modal-success-view" style="display:none;">
+
+        <div
+            id="modal-success-view"
+            style="display:none;"
+        >
 
             <div class="modal-success">
-                <div class="check">✅</div>
-                <h3 id="modal-success-title">Adhésion confirmée</h3>
-                <p id="modal-success-text">Votre compte a été enregistré et ajouté au compteur d'adhérents.</p>
-                <button class="button" onclick="closeModal()">Fermer</button>
+
+                <div class="check">
+                    ✅
+                </div>
+
+                <h3 id="modal-success-title">
+                    Adhésion confirmée
+                </h3>
+
+                <p id="modal-success-text">
+                    Votre compte a été enregistré
+                    et votre adhésion a été prise
+                    en compte.
+                </p>
+
+                <button
+                    class="button"
+                    onclick="closeModal()"
+                >
+                    Fermer
+                </button>
+
             </div>
 
         </div>
@@ -1454,182 +1317,513 @@
 
 <script>
 
-    // =========================
-    // STOCKAGE LOCAL DES COMPTES
-    // (démo côté client — à remplacer par un vrai backend
-    //  avant toute mise en production)
-    // =========================
+    /* =========================
+       STOCKAGE LOCAL
+    ========================= */
 
-    const ACCOUNTS_KEY = 'paf_accounts';
-    const SESSION_KEY = 'paf_session';
-    const COUNT_KEY = 'paf_subscriber_count';
+    const ACCOUNTS_KEY = "paf_accounts";
+    const SESSION_KEY = "paf_session";
+    const COUNT_KEY = "paf_subscriber_count";
+
 
     function getAccounts() {
+
         try {
-            return JSON.parse(localStorage.getItem(ACCOUNTS_KEY)) || {};
+
+            return JSON.parse(
+                localStorage.getItem(ACCOUNTS_KEY)
+            ) || {};
+
         } catch (e) {
+
             return {};
+
         }
+
     }
+
 
     function saveAccounts(accounts) {
-        localStorage.setItem(ACCOUNTS_KEY, JSON.stringify(accounts));
+
+        localStorage.setItem(
+            ACCOUNTS_KEY,
+            JSON.stringify(accounts)
+        );
+
     }
+
 
     function getSession() {
-        return localStorage.getItem(SESSION_KEY);
+
+        return localStorage.getItem(
+            SESSION_KEY
+        );
+
     }
+
 
     function setSession(email) {
-        localStorage.setItem(SESSION_KEY, email);
+
+        localStorage.setItem(
+            SESSION_KEY,
+            email
+        );
+
     }
+
 
     function clearSession() {
-        localStorage.removeItem(SESSION_KEY);
+
+        localStorage.removeItem(
+            SESSION_KEY
+        );
+
     }
+
 
     function getSubscriberCount() {
-        return parseInt(localStorage.getItem(COUNT_KEY) || '0', 10);
+
+        return parseInt(
+            localStorage.getItem(COUNT_KEY) || "0",
+            10
+        );
+
     }
+
 
     function incrementSubscriberCount() {
-        const next = getSubscriberCount() + 1;
-        localStorage.setItem(COUNT_KEY, String(next));
+
+        const next =
+            getSubscriberCount() + 1;
+
+        localStorage.setItem(
+            COUNT_KEY,
+            String(next)
+        );
+
         return next;
+
     }
+
 
     function refreshCountDisplay() {
-        document.getElementById('subscriber-count-value').textContent = getSubscriberCount();
+
+        const element =
+            document.getElementById(
+                "subscriber-count-value"
+            );
+
+        if (element) {
+
+            element.textContent =
+                getSubscriberCount();
+
+        }
+
     }
+
+
+    /* =========================
+       NAVIGATION COMPTE
+    ========================= */
 
     function refreshNavAccount() {
-        const slot = document.getElementById('nav-account-slot');
-        const email = getSession();
+
+        const slot =
+            document.getElementById(
+                "nav-account-slot"
+            );
+
+        const email =
+            getSession();
+
+
         if (email) {
-            slot.innerHTML = '<span class="nav-account">Connecté : <strong>' + escapeHtml(email) + '</strong> · <a href="#" onclick="logout(event)">Déconnexion</a></span>';
+
+            slot.innerHTML = `
+                <span class="nav-account">
+                    Connecté :
+                    <strong>${escapeHtml(email)}</strong>
+                    ·
+                    <a href="#" onclick="logout(event)">
+                        Déconnexion
+                    </a>
+                </span>
+            `;
+
         } else {
-            slot.innerHTML = '<a href="#adhesion" id="nav-adhesion-link" onclick="openJoinFlow(event)">Adhérer</a>';
+
+            slot.innerHTML = `
+                <a
+                    href="#adhesion"
+                    id="nav-adhesion-link"
+                    onclick="openJoinFlow(event)"
+                >
+                    Adhérer
+                </a>
+            `;
+
         }
+
     }
+
 
     function escapeHtml(str) {
-        const div = document.createElement('div');
+
+        const div =
+            document.createElement("div");
+
         div.textContent = str;
+
         return div.innerHTML;
+
     }
 
-    // =========================
-    // GESTION DE LA MODALE
-    // =========================
 
-    let currentTab = 'login';
+    /* =========================
+       MODALE
+    ========================= */
+
+    let currentTab = "login";
+
 
     function openJoinFlow(evt) {
-        if (evt) evt.preventDefault();
 
-        const email = getSession();
-
-        if (email) {
-            // Déjà connecté : on confirme directement l'adhésion
-            showSuccess(
-                'Adhésion confirmée',
-                'Vous êtes connecté en tant que ' + email + '. Votre adhésion est enregistrée dans le compteur d\'adhérents.'
-            );
-            return;
+        if (evt) {
+            evt.preventDefault();
         }
 
-        document.getElementById('modal-auth-view').style.display = 'block';
-        document.getElementById('modal-success-view').style.display = 'none';
-        document.getElementById('modal-error').classList.remove('show');
-        document.getElementById('auth-form').reset();
-        switchTab('login');
-        document.getElementById('auth-modal').classList.add('open');
+
+        const email =
+            getSession();
+
+
+        if (email) {
+
+            showSuccess(
+                "Adhésion confirmée",
+                "Vous êtes connecté en tant que " +
+                email +
+                ". Votre adhésion est déjà enregistrée."
+            );
+
+            return;
+
+        }
+
+
+        document
+            .getElementById("modal-auth-view")
+            .style.display = "block";
+
+
+        document
+            .getElementById("modal-success-view")
+            .style.display = "none";
+
+
+        document
+            .getElementById("modal-error")
+            .classList
+            .remove("show");
+
+
+        document
+            .getElementById("auth-form")
+            .reset();
+
+
+        switchTab("login");
+
+
+        document
+            .getElementById("auth-modal")
+            .classList
+            .add("open");
+
     }
+
 
     function closeModal() {
-        document.getElementById('auth-modal').classList.remove('open');
+
+        document
+            .getElementById("auth-modal")
+            .classList
+            .remove("open");
+
     }
+
 
     function switchTab(tab) {
+
         currentTab = tab;
-        document.getElementById('tab-login').classList.toggle('active', tab === 'login');
-        document.getElementById('tab-register').classList.toggle('active', tab === 'register');
-        document.getElementById('auth-submit-btn').textContent = tab === 'login' ? 'Se connecter' : 'Créer mon compte et adhérer';
-        document.getElementById('modal-error').classList.remove('show');
+
+
+        document
+            .getElementById("tab-login")
+            .classList
+            .toggle(
+                "active",
+                tab === "login"
+            );
+
+
+        document
+            .getElementById("tab-register")
+            .classList
+            .toggle(
+                "active",
+                tab === "register"
+            );
+
+
+        document
+            .getElementById("auth-submit-btn")
+            .textContent =
+                tab === "login"
+                    ? "Se connecter"
+                    : "Créer mon compte et adhérer";
+
+
+        document
+            .getElementById("modal-error")
+            .classList
+            .remove("show");
+
     }
+
 
     function showError(msg) {
-        const err = document.getElementById('modal-error');
-        err.textContent = msg;
-        err.classList.add('show');
+
+        const error =
+            document.getElementById(
+                "modal-error"
+            );
+
+        error.textContent = msg;
+
+        error.classList.add("show");
+
     }
+
 
     function showSuccess(title, text) {
-        document.getElementById('modal-auth-view').style.display = 'none';
-        document.getElementById('modal-success-view').style.display = 'block';
-        document.getElementById('modal-success-title').textContent = title;
-        document.getElementById('modal-success-text').textContent = text;
-        document.getElementById('auth-modal').classList.add('open');
+
+        document
+            .getElementById("modal-auth-view")
+            .style.display = "none";
+
+
+        document
+            .getElementById("modal-success-view")
+            .style.display = "block";
+
+
+        document
+            .getElementById("modal-success-title")
+            .textContent = title;
+
+
+        document
+            .getElementById("modal-success-text")
+            .textContent = text;
+
+
+        document
+            .getElementById("auth-modal")
+            .classList
+            .add("open");
+
     }
 
+
+    /* =========================
+       CONNEXION / INSCRIPTION
+    ========================= */
+
     function handleAuthSubmit(evt) {
+
         evt.preventDefault();
 
-        const email = document.getElementById('auth-email').value.trim().toLowerCase();
-        const password = document.getElementById('auth-password').value;
-        const accounts = getAccounts();
 
-        if (currentTab === 'register') {
+        const email =
+            document
+                .getElementById("auth-email")
+                .value
+                .trim()
+                .toLowerCase();
+
+
+        const password =
+            document
+                .getElementById("auth-password")
+                .value;
+
+
+        const accounts =
+            getAccounts();
+
+
+        /* =========================
+           CREATION DE COMPTE
+        ========================= */
+
+        if (currentTab === "register") {
 
             if (accounts[email]) {
-                showError('Un compte existe déjà avec cette adresse e-mail. Utilisez plutôt l\'onglet Connexion.');
+
+                showError(
+                    "Un compte existe déjà avec cette adresse e-mail. Utilisez plutôt l'onglet Connexion."
+                );
+
                 return;
+
             }
 
-            accounts[email] = { password: password, member: true };
+
+            accounts[email] = {
+
+                password: password,
+
+                member: true,
+
+                countedAsMember: true
+
+            };
+
+
             saveAccounts(accounts);
+
+
             setSession(email);
-            const total = incrementSubscriberCount();
+
+
+            const total =
+                incrementSubscriberCount();
+
+
             refreshCountDisplay();
+
+
             refreshNavAccount();
-            showSuccess('Bienvenue au P.A.F. !', 'Votre compte a été créé et votre adhésion enregistrée. Vous êtes l\'adhérent n°' + total + '.');
+
+
+            showSuccess(
+                "Bienvenue au P.A.F. !",
+                "Votre compte a été créé et votre adhésion enregistrée. Vous êtes l'adhérent n°" +
+                total +
+                "."
+            );
+
+
+            return;
+
+        }
+
+
+        /* =========================
+           CONNEXION
+        ========================= */
+
+        const account =
+            accounts[email];
+
+
+        if (
+            !account ||
+            account.password !== password
+        ) {
+
+            showError(
+                "E-mail ou mot de passe incorrect."
+            );
+
+            return;
+
+        }
+
+
+        setSession(email);
+
+        refreshNavAccount();
+
+
+        if (!account.countedAsMember) {
+
+            account.countedAsMember = true;
+
+            saveAccounts(accounts);
+
+
+            const total =
+                incrementSubscriberCount();
+
+
+            refreshCountDisplay();
+
+
+            showSuccess(
+                "Adhésion confirmée",
+                "Merci ! Votre adhésion est enregistrée. Vous êtes l'adhérent n°" +
+                total +
+                "."
+            );
 
         } else {
 
-            const account = accounts[email];
+            showSuccess(
+                "Bon retour parmi nous",
+                "Vous êtes connecté en tant que " +
+                email +
+                ". Votre adhésion est déjà enregistrée."
+            );
 
-            if (!account || account.password !== password) {
-                showError('E-mail ou mot de passe incorrect.');
-                return;
-            }
-
-            setSession(email);
-            refreshNavAccount();
-
-            if (!account.countedAsMember) {
-                account.countedAsMember = true;
-                saveAccounts(accounts);
-                const total = incrementSubscriberCount();
-                refreshCountDisplay();
-                showSuccess('Adhésion confirmée', 'Merci ! Votre adhésion est enregistrée. Vous êtes l\'adhérent n°' + total + '.');
-            } else {
-                showSuccess('Bon retour parmi nous', 'Vous êtes connecté en tant que ' + email + '. Votre adhésion est déjà enregistrée.');
-            }
         }
+
     }
+
+
+    /* =========================
+       DÉCONNEXION
+    ========================= */
 
     function logout(evt) {
-        if (evt) evt.preventDefault();
+
+        if (evt) {
+            evt.preventDefault();
+        }
+
         clearSession();
+
         refreshNavAccount();
+
     }
 
-    document.getElementById('auth-modal').addEventListener('click', function (e) {
-        if (e.target === this) closeModal();
-    });
 
-    // Init
+    /* =========================
+       FERMETURE DE LA MODALE
+    ========================= */
+
+    document
+        .getElementById("auth-modal")
+        .addEventListener(
+            "click",
+            function (e) {
+
+                if (e.target === this) {
+                    closeModal();
+                }
+
+            }
+        );
+
+
+    /* =========================
+       INITIALISATION
+    ========================= */
+
     refreshCountDisplay();
+
     refreshNavAccount();
 
 </script>
