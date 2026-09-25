@@ -1828,74 +1828,39 @@
 
 </body>
 </html>
-<li>
-    <a href="#communaute">
-        Communauté
-    </a>
-</li>
 <!-- =========================
-     COMMUNAUTÉ
+     PROPOSER UNE IDÉE
 ========================= -->
 
-<section id="communaute">
+<section id="idees">
 
     <h2 class="section-title">
-        <span>Communauté</span> P.A.F.
+        Proposer une <span>idée</span>
     </h2>
 
     <p class="section-intro">
-        Personnalisez votre profil et échangez avec les autres
-        membres du P.A.F.
+        Vous avez une proposition, une idée ou une suggestion
+        pour le P.A.F. ? Envoyez-la directement à l'équipe.
     </p>
 
+    <div class="community-card">
 
-    <div class="community-grid">
-
-        <!-- PROFIL -->
-
-        <div class="community-card">
-
-            <h3>
-                Mon profil
-            </h3>
-
-            <p class="community-subtitle">
-                Personnalisez les informations visibles sur votre compte.
-            </p>
-
-            <div class="profile-preview">
-
-                <div
-                    class="profile-avatar"
-                    id="profile-avatar-preview"
-                >
-                    P
-                </div>
-
-                <div>
-                    <strong id="profile-name-preview">
-                        Membre P.A.F.
-                    </strong>
-
-                    <p id="profile-bio-preview">
-                        Aucune description.
-                    </p>
-                </div>
-
-            </div>
-
+        <form
+            onsubmit="sendIdea(event)"
+        >
 
             <div class="field">
 
-                <label for="profile-name">
-                    Nom d'utilisateur
+                <label for="idea-name">
+                    Votre nom
                 </label>
 
                 <input
                     type="text"
-                    id="profile-name"
-                    maxlength="30"
-                    placeholder="Ex : Maxime"
+                    id="idea-name"
+                    placeholder="Votre nom ou pseudonyme"
+                    maxlength="50"
+                    required
                 >
 
             </div>
@@ -1903,89 +1868,45 @@
 
             <div class="field">
 
-                <label for="profile-bio">
-                    Description
+                <label for="idea-title">
+                    Sujet de l'idée
+                </label>
+
+                <input
+                    type="text"
+                    id="idea-title"
+                    placeholder="Ex : Organiser une réunion..."
+                    maxlength="100"
+                    required
+                >
+
+            </div>
+
+
+            <div class="field">
+
+                <label for="idea-message">
+                    Votre idée
                 </label>
 
                 <textarea
-                    id="profile-bio"
-                    maxlength="120"
-                    placeholder="Parlez un peu de vous..."
+                    id="idea-message"
+                    placeholder="Décrivez votre idée..."
+                    maxlength="2000"
+                    required
                 ></textarea>
 
             </div>
 
 
-            <div class="field">
-
-                <label for="profile-avatar">
-                    Initiale / symbole
-                </label>
-
-                <input
-                    type="text"
-                    id="profile-avatar"
-                    maxlength="2"
-                    placeholder="P"
-                >
-
-            </div>
-
-
             <button
+                type="submit"
                 class="button"
-                type="button"
-                onclick="saveProfile()"
             >
-                Enregistrer mon profil
+                ✉️ Envoyer mon idée
             </button>
 
-        </div>
-
-
-        <!-- DISCUSSION -->
-
-        <div class="community-card">
-
-            <h3>
-                Discussion
-            </h3>
-
-            <p class="community-subtitle">
-                Un espace de discussion entre membres.
-            </p>
-
-
-            <div
-                class="chat"
-                id="chat-messages"
-            ></div>
-
-
-            <form
-                class="chat-form"
-                onsubmit="sendMessage(event)"
-            >
-
-                <input
-                    type="text"
-                    id="chat-input"
-                    maxlength="300"
-                    placeholder="Écrire un message..."
-                    autocomplete="off"
-                    required
-                >
-
-                <button
-                    type="submit"
-                    class="button"
-                >
-                    Envoyer
-                </button>
-
-            </form>
-
-        </div>
+        </form>
 
     </div>
 
