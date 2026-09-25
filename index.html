@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <meta name="description"
-          content="P.A.F. — Parti Amical Français, mouvement politique fictif de Seine-et-Marne.">
+          content="P.A.F. — Parti Amical Français, mouvement politique de Seine-et-Marne.">
 
     <title>P.A.F. — Parti Amical Français</title>
 
@@ -779,9 +779,8 @@
     </h2>
 
     <p>
-        Organisation politique fictive de Seine-et-Marne,
-        créée autour de la liberté, de la solidarité
-        et de la participation des élèves.
+        Organisation politique de Seine-et-Marne,
+        créée autour de la participation des élèves.
     </p>
 
     <div class="buttons">
@@ -818,7 +817,7 @@
 
     <p class="section-intro">
         Les thèmes ci-dessous présentent
-        l'identité politique du P.A.F. fictif.
+        l'identité politique du P.A.F. 
     </p>
 
     <div class="grid">
@@ -831,14 +830,11 @@
             </div>
 
             <h3>
-                Libertés
+                La Partcipation
             </h3>
 
             <p>
-                Défense des libertés publiques,
-                de la liberté d'expression et
-                de la participation des élèves
-                aux changements.
+                Défense de la liberté d'expression et démocratique des élèves.
             </p>
 
         </article>
@@ -855,7 +851,7 @@
             </h3>
 
             <p>
-                Le P.A.F. fictif présente notamment
+                Le P.A.F. présente notamment
                 son soutien à Jean-Luc Mélenchon
                 ainsi que sa solidarité avec
                 la population palestinienne.
@@ -871,13 +867,11 @@
             </div>
 
             <h3>
-                Solidarité
+               Droits des élèves
             </h3>
 
             <p>
-                Défense de la solidarité sociale
-                et des droits fondamentaux des
-                populations civiles.
+                Défense du droit des élèves face aux sanctions et à l'injustice.
             </p>
 
         </article>
@@ -921,14 +915,12 @@
 
         <p>
             Le P.A.F. est ici présenté comme
-            un mouvement politique fictif
+            un mouvement politique
             situé en Seine-et-Marne.
         </p>
 
         <p>
-            Son projet repose sur la liberté
-            individuelle, la solidarité collective
-            et la participation démocratique.
+            Son projet repose surtout sur la participation des lycéens et collègiens aux évenements et choix démocratiques et politiques.
         </p>
 
     </div>
@@ -1120,7 +1112,7 @@
         </h2>
 
         <p>
-            Pour rejoindre le P.A.F. fictif,
+            Pour rejoindre le P.A.F.,
             connectez-vous ou créez un compte.
             Votre adhésion sera ajoutée au
             compteur local d'adhérents.
@@ -1170,9 +1162,6 @@
     </p>
 
     <p class="legal">
-        Projet fictif à vocation expérimentale.
-        Les comptes et le compteur d'adhérents
-        sont stockés uniquement dans le navigateur.
     </p>
 
 </footer>
@@ -1839,3 +1828,165 @@
 
 </body>
 </html>
+<li>
+    <a href="#communaute">
+        Communauté
+    </a>
+</li>
+<!-- =========================
+     COMMUNAUTÉ
+========================= -->
+
+<section id="communaute">
+
+    <h2 class="section-title">
+        <span>Communauté</span> P.A.F.
+    </h2>
+
+    <p class="section-intro">
+        Personnalisez votre profil et échangez avec les autres
+        membres du P.A.F.
+    </p>
+
+
+    <div class="community-grid">
+
+        <!-- PROFIL -->
+
+        <div class="community-card">
+
+            <h3>
+                Mon profil
+            </h3>
+
+            <p class="community-subtitle">
+                Personnalisez les informations visibles sur votre compte.
+            </p>
+
+            <div class="profile-preview">
+
+                <div
+                    class="profile-avatar"
+                    id="profile-avatar-preview"
+                >
+                    P
+                </div>
+
+                <div>
+                    <strong id="profile-name-preview">
+                        Membre P.A.F.
+                    </strong>
+
+                    <p id="profile-bio-preview">
+                        Aucune description.
+                    </p>
+                </div>
+
+            </div>
+
+
+            <div class="field">
+
+                <label for="profile-name">
+                    Nom d'utilisateur
+                </label>
+
+                <input
+                    type="text"
+                    id="profile-name"
+                    maxlength="30"
+                    placeholder="Ex : Maxime"
+                >
+
+            </div>
+
+
+            <div class="field">
+
+                <label for="profile-bio">
+                    Description
+                </label>
+
+                <textarea
+                    id="profile-bio"
+                    maxlength="120"
+                    placeholder="Parlez un peu de vous..."
+                ></textarea>
+
+            </div>
+
+
+            <div class="field">
+
+                <label for="profile-avatar">
+                    Initiale / symbole
+                </label>
+
+                <input
+                    type="text"
+                    id="profile-avatar"
+                    maxlength="2"
+                    placeholder="P"
+                >
+
+            </div>
+
+
+            <button
+                class="button"
+                type="button"
+                onclick="saveProfile()"
+            >
+                Enregistrer mon profil
+            </button>
+
+        </div>
+
+
+        <!-- DISCUSSION -->
+
+        <div class="community-card">
+
+            <h3>
+                Discussion
+            </h3>
+
+            <p class="community-subtitle">
+                Un espace de discussion entre membres.
+            </p>
+
+
+            <div
+                class="chat"
+                id="chat-messages"
+            ></div>
+
+
+            <form
+                class="chat-form"
+                onsubmit="sendMessage(event)"
+            >
+
+                <input
+                    type="text"
+                    id="chat-input"
+                    maxlength="300"
+                    placeholder="Écrire un message..."
+                    autocomplete="off"
+                    required
+                >
+
+                <button
+                    type="submit"
+                    class="button"
+                >
+                    Envoyer
+                </button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+</section>
