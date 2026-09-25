@@ -1,0 +1,1192 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="P.A.F. — Parti Anarchiste Français, mouvement politique fictif de Seine-et-Marne.">
+
+    <title>P.A.F. — Parti Anarchiste Français</title>
+
+    <style>
+
+        /* =========================
+           VARIABLES
+        ========================= */
+
+        :root {
+            --red: #e00000;
+            --red-light: #ff2222;
+            --black: #070707;
+            --dark: #101010;
+            --card: #171717;
+            --border: #292929;
+            --white: #f5f5f5;
+            --grey: #aaa;
+        }
+
+
+        /* =========================
+           RESET
+        ========================= */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background: var(--black);
+            color: var(--white);
+            font-family: Arial, Helvetica, sans-serif;
+            line-height: 1.6;
+        }
+
+        a {
+            color: inherit;
+        }
+
+
+        /* =========================
+           NAVIGATION
+        ========================= */
+
+        nav {
+            position: fixed;
+
+            top: 0;
+            left: 0;
+
+            width: 100%;
+
+            z-index: 1000;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            padding: 18px 6%;
+
+            background: rgba(7, 7, 7, 0.92);
+
+            backdrop-filter: blur(12px);
+
+            border-bottom: 1px solid #222;
+        }
+
+        .nav-logo {
+            font-size: 27px;
+            font-weight: 900;
+
+            letter-spacing: -2px;
+        }
+
+        .nav-logo span {
+            color: var(--red);
+        }
+
+        nav ul {
+            display: flex;
+
+            gap: 25px;
+
+            list-style: none;
+        }
+
+        nav ul a {
+            text-decoration: none;
+
+            font-size: 14px;
+
+            font-weight: bold;
+
+            transition: 0.2s;
+        }
+
+        nav ul a:hover {
+            color: var(--red);
+        }
+
+
+        /* =========================
+           HERO
+        ========================= */
+
+        .hero {
+
+            min-height: 100vh;
+
+            display: flex;
+
+            flex-direction: column;
+
+            justify-content: center;
+
+            align-items: center;
+
+            text-align: center;
+
+            padding: 120px 25px 60px;
+
+            background:
+                radial-gradient(
+                    circle at center,
+                    rgba(180, 0, 0, 0.38),
+                    rgba(7, 7, 7, 0.95) 65%
+                );
+        }
+
+        .hero-logo {
+
+            font-size: clamp(90px, 20vw, 210px);
+
+            font-weight: 900;
+
+            letter-spacing: -14px;
+
+            line-height: 1;
+        }
+
+        .hero-logo span {
+            color: var(--red);
+        }
+
+        .hero h2 {
+
+            margin-top: 25px;
+
+            font-size: clamp(20px, 4vw, 42px);
+
+            letter-spacing: 3px;
+        }
+
+        .hero p {
+
+            max-width: 700px;
+
+            margin: 25px auto;
+
+            color: var(--grey);
+
+            font-size: 18px;
+        }
+
+
+        /* =========================
+           BUTTONS
+        ========================= */
+
+        .buttons {
+            margin-top: 20px;
+        }
+
+        .button {
+
+            display: inline-block;
+
+            padding: 14px 28px;
+
+            margin: 7px;
+
+            background: var(--red);
+
+            color: white;
+
+            text-decoration: none;
+
+            font-weight: bold;
+
+            border-radius: 5px;
+
+            transition: 0.2s;
+        }
+
+        .button:hover {
+
+            background: var(--red-light);
+
+            transform: translateY(-3px);
+        }
+
+        .button-outline {
+
+            background: transparent;
+
+            border: 1px solid var(--red);
+        }
+
+        .button-outline:hover {
+
+            background: var(--red);
+        }
+
+
+        /* =========================
+           SECTIONS
+        ========================= */
+
+        section {
+
+            max-width: 1100px;
+
+            margin: auto;
+
+            padding: 110px 25px;
+        }
+
+        .section-title {
+
+            font-size: clamp(35px, 5vw, 55px);
+
+            margin-bottom: 15px;
+        }
+
+        .section-title span {
+
+            color: var(--red);
+        }
+
+        .section-intro {
+
+            max-width: 720px;
+
+            color: var(--grey);
+
+            margin-bottom: 45px;
+        }
+
+
+        /* =========================
+           CARDS
+        ========================= */
+
+        .grid {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(auto-fit, minmax(240px, 1fr));
+
+            gap: 20px;
+        }
+
+        .card {
+
+            padding: 30px;
+
+            background: var(--card);
+
+            border: 1px solid var(--border);
+
+            border-radius: 8px;
+
+            transition: 0.25s;
+        }
+
+        .card:hover {
+
+            transform: translateY(-5px);
+
+            border-color: var(--red);
+        }
+
+        .card-icon {
+
+            font-size: 36px;
+
+            margin-bottom: 15px;
+        }
+
+        .card h3 {
+
+            font-size: 22px;
+
+            margin-bottom: 10px;
+        }
+
+        .card p {
+
+            color: var(--grey);
+        }
+
+
+        /* =========================
+           MANIFESTE
+        ========================= */
+
+        .manifesto {
+
+            padding: 35px;
+
+            background: #121212;
+
+            border-left: 5px solid var(--red);
+        }
+
+        .manifesto p {
+
+            color: #ccc;
+
+            margin-bottom: 15px;
+        }
+
+
+        /* =========================
+           MELENCHON
+        ========================= */
+
+        .melenchon {
+
+            max-width: none;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #180000,
+                    #090909
+                );
+
+            border-top: 1px solid #300000;
+
+            border-bottom: 1px solid #300000;
+        }
+
+        .melenchon-content {
+
+            max-width: 1100px;
+
+            margin: auto;
+        }
+
+        .support-box {
+
+            padding: 35px;
+
+            background: rgba(255,255,255,0.03);
+
+            border: 1px solid #3b1111;
+
+            border-radius: 8px;
+        }
+
+        .support-label {
+
+            display: inline-block;
+
+            background: var(--red);
+
+            padding: 6px 11px;
+
+            margin-bottom: 15px;
+
+            font-size: 12px;
+
+            font-weight: bold;
+        }
+
+
+        /* =========================
+           PALESTINE
+        ========================= */
+
+        .palestine {
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #050505,
+                    #111111
+                );
+
+            max-width: none;
+        }
+
+        .palestine-content {
+
+            max-width: 1100px;
+
+            margin: auto;
+        }
+
+        .flag {
+
+            font-size: 70px;
+
+            margin-bottom: 10px;
+        }
+
+
+        /* =========================
+           LIENS
+        ========================= */
+
+        .links {
+
+            display: grid;
+
+            gap: 12px;
+        }
+
+        .link {
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: space-between;
+
+            padding: 20px;
+
+            background: var(--card);
+
+            border: 1px solid var(--border);
+
+            text-decoration: none;
+
+            transition: 0.2s;
+        }
+
+        .link:hover {
+
+            border-color: var(--red);
+
+            padding-left: 28px;
+        }
+
+        .arrow {
+
+            color: var(--red);
+
+            font-size: 22px;
+        }
+
+
+        /* =========================
+           ADHESION
+        ========================= */
+
+        .join {
+
+            max-width: none;
+
+            text-align: center;
+
+            background: var(--red);
+
+            padding: 100px 25px;
+        }
+
+        .join-content {
+
+            max-width: 800px;
+
+            margin: auto;
+        }
+
+        .join h2 {
+
+            font-size: clamp(38px, 6vw, 65px);
+
+            margin-bottom: 20px;
+        }
+
+        .join p {
+
+            max-width: 650px;
+
+            margin: 15px auto;
+        }
+
+        .join .button {
+
+            background: white;
+
+            color: black;
+        }
+
+        .join .button-outline {
+
+            background: transparent;
+
+            color: white;
+
+            border-color: white;
+        }
+
+        .join .button-outline:hover {
+
+            background: white;
+
+            color: black;
+        }
+
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        footer {
+
+            padding: 45px 25px;
+
+            text-align: center;
+
+            background: #050505;
+
+            color: #777;
+        }
+
+        footer strong {
+
+            color: white;
+        }
+
+        .legal {
+
+            max-width: 700px;
+
+            margin: 20px auto 0;
+
+            font-size: 12px;
+
+            color: #555;
+        }
+
+
+        /* =========================
+           MOBILE
+        ========================= */
+
+        @media (max-width: 700px) {
+
+            nav {
+
+                padding: 15px 20px;
+            }
+
+            nav ul {
+
+                gap: 12px;
+            }
+
+            nav ul li:nth-child(n+3) {
+
+                display: none;
+            }
+
+            .hero-logo {
+
+                letter-spacing: -8px;
+            }
+
+            section {
+
+                padding: 75px 20px;
+            }
+
+            .link {
+
+                font-size: 14px;
+            }
+
+            .button {
+
+                width: 90%;
+
+                max-width: 350px;
+            }
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<!-- =========================
+     NAVIGATION
+========================= -->
+
+<nav>
+
+    <div class="nav-logo">
+        P<span>.</span>A<span>.</span>F
+    </div>
+
+    <ul>
+
+        <li>
+            <a href="#accueil">
+                Accueil
+            </a>
+        </li>
+
+        <li>
+            <a href="#positions">
+                Positions
+            </a>
+        </li>
+
+        <li>
+            <a href="#melenchon">
+                Mélenchon
+            </a>
+        </li>
+
+        <li>
+            <a href="#palestine">
+                Palestine
+            </a>
+        </li>
+
+        <li>
+            <a href="#adhesion">
+                Adhérer
+            </a>
+        </li>
+
+    </ul>
+
+</nav>
+
+
+
+<!-- =========================
+     ACCUEIL
+========================= -->
+
+<header class="hero" id="accueil">
+
+    <div class="hero-logo">
+
+        P<span>.</span>A<span>.</span>F
+
+    </div>
+
+    <h2>
+        PARTI ANARCHISTE FRANÇAIS
+    </h2>
+
+    <p>
+
+        Organisation politique fictive de
+        Seine-et-Marne, créée autour de la
+        liberté, de la solidarité, de
+        l'écologie et de la participation citoyenne.
+
+    </p>
+
+    <div class="buttons">
+
+        <a
+            href="#positions"
+            class="button"
+        >
+            Découvrir le P.A.F.
+        </a>
+
+        <a
+            href="#adhesion"
+            class="button button-outline"
+        >
+            Adhérer
+        </a>
+
+    </div>
+
+</header>
+
+
+
+<!-- =========================
+     POSITIONS
+========================= -->
+
+<section id="positions">
+
+    <h2 class="section-title">
+
+        Nos <span>positions</span>
+
+    </h2>
+
+    <p class="section-intro">
+
+        Les thèmes ci-dessous présentent
+        l'identité politique du P.A.F.
+        dans le cadre de ce projet fictif.
+
+    </p>
+
+
+    <div class="grid">
+
+
+        <article class="card">
+
+            <div class="card-icon">
+                ✊
+            </div>
+
+            <h3>
+                Libertés
+            </h3>
+
+            <p>
+
+                Défense des libertés publiques,
+                de la liberté d'expression et
+                de la participation citoyenne.
+
+            </p>
+
+        </article>
+
+
+        <article class="card">
+
+            <div class="card-icon">
+                🌱
+            </div>
+
+            <h3>
+                Écologie
+            </h3>
+
+            <p>
+
+                Promotion de mesures destinées
+                à réduire l'impact environnemental
+                et à développer des alternatives durables.
+
+            </p>
+
+        </article>
+
+
+        <article class="card">
+
+            <div class="card-icon">
+                🤝
+            </div>
+
+            <h3>
+                Solidarité
+            </h3>
+
+            <p>
+
+                Défense de la solidarité sociale
+                et des droits fondamentaux des
+                populations civiles.
+
+            </p>
+
+        </article>
+
+
+        <article class="card">
+
+            <div class="card-icon">
+                🏴
+            </div>
+
+            <h3>
+                Autogestion
+            </h3>
+
+            <p>
+
+                Réflexion autour de formes
+                d'organisation donnant davantage
+                de place aux décisions collectives.
+
+            </p>
+
+        </article>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     MANIFESTE
+========================= -->
+
+<section>
+
+    <h2 class="section-title">
+
+        Le <span>manifeste</span>
+
+    </h2>
+
+
+    <div class="manifesto">
+
+        <p>
+
+            Le P.A.F. est ici présenté comme
+            un mouvement politique fictif
+            imaginé en Seine-et-Marne.
+
+        </p>
+
+        <p>
+
+            Son projet repose sur la liberté
+            individuelle, la solidarité collective,
+            l'écologie et la participation démocratique.
+
+        </p>
+
+        <p>
+
+            Cette page constitue une présentation
+            fictive et ne représente aucune
+            organisation politique réelle.
+
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     MELENCHON
+========================= -->
+
+<section
+    class="melenchon"
+    id="melenchon"
+>
+
+    <div class="melenchon-content">
+
+        <h2 class="section-title">
+
+            Jean-Luc <span>Mélenchon</span>
+
+        </h2>
+
+
+        <div class="support-box">
+
+            <span class="support-label">
+
+                SOUTIEN DÉCLARÉ DU P.A.F.
+
+            </span>
+
+
+            <p>
+
+                Dans l'univers fictif présenté
+                par ce site, le P.A.F. indique
+                soutenir Jean-Luc Mélenchon.
+
+            </p>
+
+            <br>
+
+            <p>
+
+                Consultez directement les sites
+                officiels pour connaître leurs
+                publications et positions.
+
+            </p>
+
+
+            <div class="buttons">
+
+                <a
+                    href="https://melenchon.fr/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="button"
+                >
+
+                    Site de Jean-Luc Mélenchon
+
+                </a>
+
+
+                <a
+                    href="https://lafranceinsoumise.fr/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="button button-outline"
+                >
+
+                    La France insoumise
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     PALESTINE
+========================= -->
+
+<section
+    class="palestine"
+    id="palestine"
+>
+
+    <div class="palestine-content">
+
+        <div class="flag">
+            🇵🇸
+        </div>
+
+
+        <h2 class="section-title">
+
+            Free <span>Palestine</span>
+
+        </h2>
+
+
+        <p class="section-intro">
+
+            Le P.A.F. affirme sa solidarité
+            avec la population palestinienne
+            et son attachement à la protection
+            des droits fondamentaux des civils.
+
+        </p>
+
+
+        <a
+            href="https://www.france-palestine.org/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="button"
+        >
+
+            France Palestine Solidarité
+
+        </a>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     RESSOURCES
+========================= -->
+
+<section id="liens">
+
+    <h2 class="section-title">
+
+        Liens & <span>ressources</span>
+
+    </h2>
+
+
+    <p class="section-intro">
+
+        Ressources externes et sites officiels.
+
+    </p>
+
+
+    <div class="links">
+
+
+        <a
+            class="link"
+            href="https://melenchon.fr/"
+            target="_blank"
+            rel="noopener noreferrer"
+        >
+
+            <span>
+                Jean-Luc Mélenchon — site officiel
+            </span>
+
+            <span class="arrow">
+                →
+            </span>
+
+        </a>
+
+
+        <a
+            class="link"
+            href="https://lafranceinsoumise.fr/"
+            target="_blank"
+            rel="noopener noreferrer"
+        >
+
+            <span>
+                La France insoumise
+            </span>
+
+            <span class="arrow">
+                →
+            </span>
+
+        </a>
+
+
+        <a
+            class="link"
+            href="https://www.france-palestine.org/"
+            target="_blank"
+            rel="noopener noreferrer"
+        >
+
+            <span>
+                Association France Palestine Solidarité
+            </span>
+
+            <span class="arrow">
+                →
+            </span>
+
+        </a>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     ADHÉSION + NEWSLETTER
+========================= -->
+
+<section
+    class="join"
+    id="adhesion"
+>
+
+    <div class="join-content">
+
+        <h2>
+            Rejoindre le P.A.F.
+        </h2>
+
+
+        <p>
+
+            Pour participer au projet fictif
+            du P.A.F., vous pouvez nous contacter
+            par e-mail.
+
+        </p>
+
+
+        <div class="buttons">
+
+
+            <!-- BOUTON ADHÉSION -->
+
+            <a
+                class="button"
+                href="mailto:contact@paf-77.example?subject=Demande%20d%27adh%C3%A9sion%20au%20P.A.F.&body=Bonjour%2C%0A%0AJe%20souhaite%20obtenir%20des%20informations%20sur%20le%20P.A.F.%20et%20son%20fonctionnement.%0A%0AMerci."
+            >
+
+                ✊ Adhérer au P.A.F.
+
+            </a>
+
+
+            <!-- BOUTON NEWSLETTER -->
+
+            <a
+                class="button button-outline"
+                href="mailto:newsletter@paf-77.example?subject=Inscription%20%C3%A0%20la%20newsletter%20du%20P.A.F.&body=Bonjour%2C%0A%0AJe%20souhaite%20recevoir%20les%20informations%20et%20actualit%C3%A9s%20du%20P.A.F.%0A%0AMon%20adresse%20e-mail%20%3A%0A%0AMerci."
+            >
+
+                ✉️ Newsletter
+
+            </a>
+
+
+        </div>
+
+
+        <p class="legal">
+
+            Les boutons ouvrent votre application
+            de messagerie avec un message prérempli.
+            Aucune adresse e-mail n'est enregistrée
+            directement par cette page GitHub Pages.
+
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer>
+
+    <p>
+
+        <strong>
+            P.A.F. — Parti Anarchiste Français
+        </strong>
+
+    </p>
+
+
+    <p>
+
+        Seine-et-Marne · France
+
+    </p>
+
+
+    <p class="legal">
+
+        Projet fictif créé à des fins de
+        présentation et de création web.
+        Le P.A.F. présenté sur cette page
+        n'est pas une organisation politique réelle.
+
+    </p>
+
+</footer>
+
+
+</body>
+
+</html>
