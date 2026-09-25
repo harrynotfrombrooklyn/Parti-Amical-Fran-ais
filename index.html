@@ -3,9 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <meta name="description"
           content="P.A.F. — Parti Amical Français, mouvement politique fictif de Seine-et-Marne.">
@@ -93,6 +91,7 @@
             display: flex;
             gap: 25px;
             list-style: none;
+            align-items: center;
         }
 
         nav ul a {
@@ -242,10 +241,10 @@
 
         .grid {
             display: grid;
-
-            grid-template-columns:
-                repeat(auto-fit, minmax(240px, 1fr));
-
+            grid-template-columns: repeat(
+                auto-fit,
+                minmax(240px, 1fr)
+            );
             gap: 20px;
         }
 
@@ -534,7 +533,7 @@
             margin-bottom: 8px;
         }
 
-        .modal .modal-sub {
+        .modal-sub {
             color: var(--grey);
             font-size: 14px;
             margin-bottom: 25px;
@@ -751,7 +750,6 @@
         <li id="nav-account-slot">
             <a
                 href="#adhesion"
-                id="nav-adhesion-link"
                 onclick="openJoinFlow(event)"
             >
                 Adhérer
@@ -767,7 +765,10 @@
      ACCUEIL
 ========================= -->
 
-<header class="hero" id="accueil">
+<header
+    class="hero"
+    id="accueil"
+>
 
     <div class="hero-logo">
         P<span>.</span>A<span>.</span>F
@@ -793,6 +794,7 @@
         </a>
 
         <button
+            type="button"
             class="button button-outline"
             onclick="openJoinFlow()"
         >
@@ -819,8 +821,8 @@
         l'identité politique du P.A.F. fictif.
     </p>
 
-
     <div class="grid">
+
 
         <article class="card">
 
@@ -853,10 +855,10 @@
             </h3>
 
             <p>
-                Cette présentation fictive indique
-                notamment un soutien politique à
-                Jean-Luc Mélenchon ainsi qu'une
-                solidarité avec la population palestinienne.
+                Le P.A.F. fictif présente notamment
+                son soutien à Jean-Luc Mélenchon
+                ainsi que sa solidarité avec
+                la population palestinienne.
             </p>
 
         </article>
@@ -899,6 +901,7 @@
 
         </article>
 
+
     </div>
 
 </section>
@@ -918,8 +921,8 @@
 
         <p>
             Le P.A.F. est ici présenté comme
-            un mouvement politique fictif situé
-            en Seine-et-Marne.
+            un mouvement politique fictif
+            situé en Seine-et-Marne.
         </p>
 
         <p>
@@ -956,10 +959,8 @@
 
             <p>
                 Consultez directement les sites
-                officiels pour connaître les
-                publications et positions de
-                Jean-Luc Mélenchon et de
-                La France insoumise.
+                officiels pour connaître leurs
+                publications et leurs positions.
             </p>
 
             <div class="buttons">
@@ -1043,12 +1044,14 @@
 
     <div class="links">
 
+
         <a
             class="link"
             href="https://melenchon.fr/"
             target="_blank"
             rel="noopener noreferrer"
         >
+
             <span>
                 Jean-Luc Mélenchon — site officiel
             </span>
@@ -1056,6 +1059,7 @@
             <span class="arrow">
                 →
             </span>
+
         </a>
 
 
@@ -1065,6 +1069,7 @@
             target="_blank"
             rel="noopener noreferrer"
         >
+
             <span>
                 La France insoumise
             </span>
@@ -1072,6 +1077,7 @@
             <span class="arrow">
                 →
             </span>
+
         </a>
 
 
@@ -1081,6 +1087,7 @@
             target="_blank"
             rel="noopener noreferrer"
         >
+
             <span>
                 Association France Palestine Solidarité
             </span>
@@ -1088,7 +1095,9 @@
             <span class="arrow">
                 →
             </span>
+
         </a>
+
 
     </div>
 
@@ -1113,13 +1122,14 @@
         <p>
             Pour rejoindre le P.A.F. fictif,
             connectez-vous ou créez un compte.
-            Votre adhésion sera ajoutée au compteur
-            local d'adhérents.
+            Votre adhésion sera ajoutée au
+            compteur local d'adhérents.
         </p>
 
         <div class="buttons">
 
             <button
+                type="button"
                 class="button"
                 onclick="openJoinFlow()"
             >
@@ -1162,15 +1172,14 @@
     <p class="legal">
         Projet fictif à vocation expérimentale.
         Les comptes et le compteur d'adhérents
-        fonctionnent uniquement dans le navigateur
-        de l'utilisateur.
+        sont stockés uniquement dans le navigateur.
     </p>
 
 </footer>
 
 
 <!-- =========================
-     MODAL DE CONNEXION
+     MODALE CONNEXION
 ========================= -->
 
 <div
@@ -1181,6 +1190,7 @@
     <div class="modal">
 
         <button
+            type="button"
             class="modal-close"
             onclick="closeModal()"
         >
@@ -1203,6 +1213,7 @@
             <div class="modal-tabs">
 
                 <button
+                    type="button"
                     class="modal-tab active"
                     id="tab-login"
                     onclick="switchTab('login')"
@@ -1211,6 +1222,7 @@
                 </button>
 
                 <button
+                    type="button"
                     class="modal-tab"
                     id="tab-register"
                     onclick="switchTab('register')"
@@ -1258,8 +1270,8 @@
                         type="password"
                         id="auth-password"
                         required
-                        autocomplete="current-password"
                         minlength="4"
+                        autocomplete="current-password"
                     >
 
                 </div>
@@ -1280,7 +1292,7 @@
 
         <div
             id="modal-success-view"
-            style="display:none;"
+            style="display: none;"
         >
 
             <div class="modal-success">
@@ -1294,12 +1306,11 @@
                 </h3>
 
                 <p id="modal-success-text">
-                    Votre compte a été enregistré
-                    et votre adhésion a été prise
-                    en compte.
+                    Votre adhésion a été enregistrée.
                 </p>
 
                 <button
+                    type="button"
                     class="button"
                     onclick="closeModal()"
                 >
@@ -1334,7 +1345,7 @@
                 localStorage.getItem(ACCOUNTS_KEY)
             ) || {};
 
-        } catch (e) {
+        } catch (error) {
 
             return {};
 
@@ -1414,11 +1425,25 @@
             );
 
         if (element) {
-
             element.textContent =
                 getSubscriberCount();
-
         }
+
+    }
+
+
+    /* =========================
+       PROTECTION HTML
+    ========================= */
+
+    function escapeHtml(value) {
+
+        const div =
+            document.createElement("div");
+
+        div.textContent = value;
+
+        return div.innerHTML;
 
     }
 
@@ -1445,7 +1470,10 @@
                     Connecté :
                     <strong>${escapeHtml(email)}</strong>
                     ·
-                    <a href="#" onclick="logout(event)">
+                    <a
+                        href="#"
+                        onclick="logout(event)"
+                    >
                         Déconnexion
                     </a>
                 </span>
@@ -1456,7 +1484,6 @@
             slot.innerHTML = `
                 <a
                     href="#adhesion"
-                    id="nav-adhesion-link"
                     onclick="openJoinFlow(event)"
                 >
                     Adhérer
@@ -1468,18 +1495,6 @@
     }
 
 
-    function escapeHtml(str) {
-
-        const div =
-            document.createElement("div");
-
-        div.textContent = str;
-
-        return div.innerHTML;
-
-    }
-
-
     /* =========================
        MODALE
     ========================= */
@@ -1487,10 +1502,10 @@
     let currentTab = "login";
 
 
-    function openJoinFlow(evt) {
+    function openJoinFlow(event) {
 
-        if (evt) {
-            evt.preventDefault();
+        if (event) {
+            event.preventDefault();
         }
 
 
@@ -1593,21 +1608,21 @@
     }
 
 
-    function showError(msg) {
+    function showError(message) {
 
         const error =
             document.getElementById(
                 "modal-error"
             );
 
-        error.textContent = msg;
+        error.textContent = message;
 
         error.classList.add("show");
 
     }
 
 
-    function showSuccess(title, text) {
+    function showSuccess(title, message) {
 
         document
             .getElementById("modal-auth-view")
@@ -1626,7 +1641,7 @@
 
         document
             .getElementById("modal-success-text")
-            .textContent = text;
+            .textContent = message;
 
 
         document
@@ -1641,9 +1656,9 @@
        CONNEXION / INSCRIPTION
     ========================= */
 
-    function handleAuthSubmit(evt) {
+    function handleAuthSubmit(event) {
 
-        evt.preventDefault();
+        event.preventDefault();
 
 
         const email =
@@ -1665,7 +1680,7 @@
 
 
         /* =========================
-           CREATION DE COMPTE
+           INSCRIPTION
         ========================= */
 
         if (currentTab === "register") {
@@ -1673,7 +1688,7 @@
             if (accounts[email]) {
 
                 showError(
-                    "Un compte existe déjà avec cette adresse e-mail. Utilisez plutôt l'onglet Connexion."
+                    "Un compte existe déjà avec cette adresse e-mail. Utilisez l'onglet Connexion."
                 );
 
                 return;
@@ -1682,18 +1697,13 @@
 
 
             accounts[email] = {
-
                 password: password,
-
                 member: true,
-
                 countedAsMember: true
-
             };
 
 
             saveAccounts(accounts);
-
 
             setSession(email);
 
@@ -1703,7 +1713,6 @@
 
 
             refreshCountDisplay();
-
 
             refreshNavAccount();
 
@@ -1787,10 +1796,10 @@
        DÉCONNEXION
     ========================= */
 
-    function logout(evt) {
+    function logout(event) {
 
-        if (evt) {
-            evt.preventDefault();
+        if (event) {
+            event.preventDefault();
         }
 
         clearSession();
@@ -1808,9 +1817,9 @@
         .getElementById("auth-modal")
         .addEventListener(
             "click",
-            function (e) {
+            function (event) {
 
-                if (e.target === this) {
+                if (event.target === this) {
                     closeModal();
                 }
 
@@ -1823,12 +1832,10 @@
     ========================= */
 
     refreshCountDisplay();
-
     refreshNavAccount();
 
 </script>
 
 
 </body>
-
 </html>
