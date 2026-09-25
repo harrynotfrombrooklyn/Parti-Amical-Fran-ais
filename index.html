@@ -20,8 +20,8 @@
         ========================= */
 
         :root {
-            --red: #e00000;
-            --red-light: #ff2222;
+            --blue: #0055e0;
+            --blue-light: #2277ff;
             --black: #070707;
             --dark: #101010;
             --card: #171717;
@@ -92,7 +92,7 @@
         }
 
         .nav-logo span {
-            color: var(--red);
+            color: var(--blue);
         }
 
         nav ul {
@@ -114,7 +114,16 @@
         }
 
         nav ul a:hover {
-            color: var(--red);
+            color: var(--blue-light);
+        }
+
+        .nav-account {
+            font-size: 13px;
+            color: var(--grey);
+        }
+
+        .nav-account strong {
+            color: var(--blue-light);
         }
 
 
@@ -141,7 +150,7 @@
             background:
                 radial-gradient(
                     circle at center,
-                    rgba(180, 0, 0, 0.38),
+                    rgba(0, 60, 190, 0.38),
                     rgba(7, 7, 7, 0.95) 65%
                 );
         }
@@ -158,7 +167,7 @@
         }
 
         .hero-logo span {
-            color: var(--red);
+            color: var(--blue);
         }
 
         .hero h2 {
@@ -198,7 +207,7 @@
 
             margin: 7px;
 
-            background: var(--red);
+            background: var(--blue);
 
             color: white;
 
@@ -208,12 +217,20 @@
 
             border-radius: 5px;
 
+            border: none;
+
+            font-size: 15px;
+
+            cursor: pointer;
+
             transition: 0.2s;
+
+            font-family: inherit;
         }
 
         .button:hover {
 
-            background: var(--red-light);
+            background: var(--blue-light);
 
             transform: translateY(-3px);
         }
@@ -222,12 +239,12 @@
 
             background: transparent;
 
-            border: 1px solid var(--red);
+            border: 1px solid var(--blue);
         }
 
         .button-outline:hover {
 
-            background: var(--red);
+            background: var(--blue);
         }
 
 
@@ -253,7 +270,7 @@
 
         .section-title span {
 
-            color: var(--red);
+            color: var(--blue);
         }
 
         .section-intro {
@@ -297,7 +314,7 @@
 
             transform: translateY(-5px);
 
-            border-color: var(--red);
+            border-color: var(--blue);
         }
 
         .card-icon {
@@ -330,7 +347,7 @@
 
             background: #121212;
 
-            border-left: 5px solid var(--red);
+            border-left: 5px solid var(--blue);
         }
 
         .manifesto p {
@@ -352,13 +369,13 @@
             background:
                 linear-gradient(
                     135deg,
-                    #180000,
+                    #000c18,
                     #090909
                 );
 
-            border-top: 1px solid #300000;
+            border-top: 1px solid #001a30;
 
-            border-bottom: 1px solid #300000;
+            border-bottom: 1px solid #001a30;
         }
 
         .melenchon-content {
@@ -374,7 +391,7 @@
 
             background: rgba(255,255,255,0.03);
 
-            border: 1px solid #3b1111;
+            border: 1px solid #10203b;
 
             border-radius: 8px;
         }
@@ -383,7 +400,7 @@
 
             display: inline-block;
 
-            background: var(--red);
+            background: var(--blue);
 
             padding: 6px 11px;
 
@@ -458,14 +475,14 @@
 
         .link:hover {
 
-            border-color: var(--red);
+            border-color: var(--blue);
 
             padding-left: 28px;
         }
 
         .arrow {
 
-            color: var(--red);
+            color: var(--blue);
 
             font-size: 22px;
         }
@@ -481,7 +498,7 @@
 
             text-align: center;
 
-            background: var(--red);
+            background: var(--blue);
 
             padding: 100px 25px;
         }
@@ -530,6 +547,26 @@
             color: black;
         }
 
+        .subscriber-count {
+
+            display: inline-block;
+
+            margin-top: 25px;
+
+            padding: 10px 20px;
+
+            background: rgba(0,0,0,0.2);
+
+            border-radius: 20px;
+
+            font-size: 14px;
+        }
+
+        .subscriber-count strong {
+
+            font-size: 18px;
+        }
+
 
         /* =========================
            FOOTER
@@ -560,6 +597,225 @@
             font-size: 12px;
 
             color: #555;
+        }
+
+
+        /* =========================
+           MODAL (CONNEXION)
+        ========================= */
+
+        .modal-overlay {
+
+            display: none;
+
+            position: fixed;
+
+            inset: 0;
+
+            background: rgba(0,0,0,0.75);
+
+            z-index: 2000;
+
+            align-items: center;
+
+            justify-content: center;
+
+            padding: 20px;
+        }
+
+        .modal-overlay.open {
+
+            display: flex;
+        }
+
+        .modal {
+
+            width: 100%;
+
+            max-width: 420px;
+
+            background: var(--dark);
+
+            border: 1px solid var(--border);
+
+            border-radius: 10px;
+
+            padding: 35px;
+
+            position: relative;
+        }
+
+        .modal h3 {
+
+            font-size: 24px;
+
+            margin-bottom: 8px;
+        }
+
+        .modal .modal-sub {
+
+            color: var(--grey);
+
+            font-size: 14px;
+
+            margin-bottom: 25px;
+        }
+
+        .modal-close {
+
+            position: absolute;
+
+            top: 18px;
+
+            right: 20px;
+
+            background: none;
+
+            border: none;
+
+            color: var(--grey);
+
+            font-size: 20px;
+
+            cursor: pointer;
+        }
+
+        .modal-close:hover {
+
+            color: white;
+        }
+
+        .modal-tabs {
+
+            display: flex;
+
+            gap: 8px;
+
+            margin-bottom: 22px;
+
+            border-bottom: 1px solid var(--border);
+        }
+
+        .modal-tab {
+
+            background: none;
+
+            border: none;
+
+            color: var(--grey);
+
+            padding: 10px 4px;
+
+            font-size: 14px;
+
+            font-weight: bold;
+
+            cursor: pointer;
+
+            border-bottom: 2px solid transparent;
+
+            font-family: inherit;
+        }
+
+        .modal-tab.active {
+
+            color: white;
+
+            border-bottom-color: var(--blue);
+        }
+
+        .field {
+
+            margin-bottom: 16px;
+        }
+
+        .field label {
+
+            display: block;
+
+            font-size: 13px;
+
+            color: var(--grey);
+
+            margin-bottom: 6px;
+        }
+
+        .field input {
+
+            width: 100%;
+
+            padding: 11px 13px;
+
+            background: #1c1c1c;
+
+            border: 1px solid var(--border);
+
+            border-radius: 5px;
+
+            color: white;
+
+            font-size: 14px;
+
+            font-family: inherit;
+        }
+
+        .field input:focus {
+
+            outline: none;
+
+            border-color: var(--blue);
+        }
+
+        .modal-error {
+
+            display: none;
+
+            background: rgba(224, 0, 0, 0.12);
+
+            border: 1px solid #5a1414;
+
+            color: #ff9d9d;
+
+            padding: 10px 12px;
+
+            border-radius: 5px;
+
+            font-size: 13px;
+
+            margin-bottom: 16px;
+        }
+
+        .modal-error.show {
+
+            display: block;
+        }
+
+        .modal-submit {
+
+            width: 100%;
+
+            margin: 6px 0 0;
+        }
+
+        .modal-success {
+
+            text-align: center;
+        }
+
+        .modal-success .check {
+
+            font-size: 46px;
+
+            margin-bottom: 10px;
+        }
+
+        .modal-success p {
+
+            color: var(--grey);
+
+            font-size: 14px;
+
+            margin-bottom: 22px;
         }
 
 
@@ -651,8 +907,8 @@
             </a>
         </li>
 
-        <li>
-            <a href="#adhesion">
+        <li id="nav-account-slot">
+            <a href="#adhesion" id="nav-adhesion-link">
                 Adhérer
             </a>
         </li>
@@ -689,19 +945,19 @@
 
     <div class="buttons">
 
-        <a
+        
             href="#positions"
             class="button"
         >
             Découvrir le P.A.F.
         </a>
 
-        <a
-            href="#adhesion"
+        <button
             class="button button-outline"
+            onclick="openJoinFlow()"
         >
             Adhérer
-        </a>
+        </button>
 
     </div>
 
@@ -882,10 +1138,6 @@
             </span>
 
 
-            </p>
-
-            <br>
-
             <p>
 
                 Consultez directement les sites
@@ -897,7 +1149,7 @@
 
             <div class="buttons">
 
-                <a
+                
                     href="https://melenchon.fr/"
                     target="_blank"
                     rel="noopener noreferrer"
@@ -909,7 +1161,7 @@
                 </a>
 
 
-                <a
+                
                     href="https://lafranceinsoumise.fr/"
                     target="_blank"
                     rel="noopener noreferrer"
@@ -963,7 +1215,7 @@
         </p>
 
 
-        <a
+        
             href="https://www.france-palestine.org/"
             target="_blank"
             rel="noopener noreferrer"
@@ -1003,7 +1255,7 @@
     <div class="links">
 
 
-        <a
+        
             class="link"
             href="https://melenchon.fr/"
             target="_blank"
@@ -1021,7 +1273,7 @@
         </a>
 
 
-        <a
+        
             class="link"
             href="https://lafranceinsoumise.fr/"
             target="_blank"
@@ -1039,7 +1291,7 @@
         </a>
 
 
-        <a
+        
             class="link"
             href="https://www.france-palestine.org/"
             target="_blank"
@@ -1064,7 +1316,7 @@
 
 
 <!-- =========================
-     ADHÉSION + NEWSLETTER
+     ADHÉSION
 ========================= -->
 
 <section
@@ -1081,46 +1333,32 @@
 
         <p>
 
-            Pour participer au projet
-            du P.A.F., vous pouvez nous contacter
-            par e-mail : paf@gmail.com
+            Pour adhérer au P.A.F., connectez-vous
+            ou créez un compte. Votre adhésion sera
+            ajoutée à notre compteur d'adhérents.
 
         </p>
 
 
         <div class="buttons">
 
-
-            <!-- BOUTON ADHÉSION -->
-
-            <a
+            <button
                 class="button"
-                href="mailto:contact@paf-77.example?subject=Demande%20d%27adh%C3%A9sion%20au%20P.A.F.&body=Bonjour%2C%0A%0AJe%20souhaite%20obtenir%20des%20informations%20sur%20le%20P.A.F.%20et%20son%20fonctionnement.%0A%0AMerci."
+                onclick="openJoinFlow()"
             >
 
                 ✊ Adhérer au P.A.F.
 
-            </a>
-
-
-            <!-- BOUTON NEWSLETTER -->
-
-            <a
-                class="button button-outline"
-                href="mailto:newsletter@paf-77.example?subject=Inscription%20%C3%A0%20la%20newsletter%20du%20P.A.F.&body=Bonjour%2C%0A%0AJe%20souhaite%20recevoir%20les%20informations%20et%20actualit%C3%A9s%20du%20P.A.F.%0A%0AMon%20adresse%20e-mail%20%3A%0A%0AMerci."
-            >
-
-                ✉️ Newsletter
-
-            </a>
-
+            </button>
 
         </div>
 
+        <div class="subscriber-count">
 
-        <p class="legal">
+            <strong id="subscriber-count-value">0</strong> adhérent(s) enregistré(s)
 
-        </p>
+        </div>
+
 
     </div>
 
@@ -1155,6 +1393,246 @@
     </p>
 
 </footer>
+
+
+
+<!-- =========================
+     MODAL DE CONNEXION / INSCRIPTION
+========================= -->
+
+<div class="modal-overlay" id="auth-modal">
+
+    <div class="modal">
+
+        <button class="modal-close" onclick="closeModal()">✕</button>
+
+        <div id="modal-auth-view">
+
+            <h3>Espace adhérents</h3>
+            <p class="modal-sub">Connectez-vous ou créez un compte pour adhérer au P.A.F.</p>
+
+            <div class="modal-tabs">
+                <button class="modal-tab active" id="tab-login" onclick="switchTab('login')">Connexion</button>
+                <button class="modal-tab" id="tab-register" onclick="switchTab('register')">Créer un compte</button>
+            </div>
+
+            <div class="modal-error" id="modal-error"></div>
+
+            <form id="auth-form" onsubmit="handleAuthSubmit(event)">
+
+                <div class="field">
+                    <label for="auth-email">Adresse e-mail</label>
+                    <input type="email" id="auth-email" required autocomplete="email">
+                </div>
+
+                <div class="field">
+                    <label for="auth-password">Mot de passe</label>
+                    <input type="password" id="auth-password" required autocomplete="current-password" minlength="4">
+                </div>
+
+                <button type="submit" class="button modal-submit" id="auth-submit-btn">Se connecter</button>
+
+            </form>
+
+        </div>
+
+        <div id="modal-success-view" style="display:none;">
+
+            <div class="modal-success">
+                <div class="check">✅</div>
+                <h3 id="modal-success-title">Adhésion confirmée</h3>
+                <p id="modal-success-text">Votre compte a été enregistré et ajouté au compteur d'adhérents.</p>
+                <button class="button" onclick="closeModal()">Fermer</button>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<script>
+
+    // =========================
+    // STOCKAGE LOCAL DES COMPTES
+    // (démo côté client — à remplacer par un vrai backend
+    //  avant toute mise en production)
+    // =========================
+
+    const ACCOUNTS_KEY = 'paf_accounts';
+    const SESSION_KEY = 'paf_session';
+    const COUNT_KEY = 'paf_subscriber_count';
+
+    function getAccounts() {
+        try {
+            return JSON.parse(localStorage.getItem(ACCOUNTS_KEY)) || {};
+        } catch (e) {
+            return {};
+        }
+    }
+
+    function saveAccounts(accounts) {
+        localStorage.setItem(ACCOUNTS_KEY, JSON.stringify(accounts));
+    }
+
+    function getSession() {
+        return localStorage.getItem(SESSION_KEY);
+    }
+
+    function setSession(email) {
+        localStorage.setItem(SESSION_KEY, email);
+    }
+
+    function clearSession() {
+        localStorage.removeItem(SESSION_KEY);
+    }
+
+    function getSubscriberCount() {
+        return parseInt(localStorage.getItem(COUNT_KEY) || '0', 10);
+    }
+
+    function incrementSubscriberCount() {
+        const next = getSubscriberCount() + 1;
+        localStorage.setItem(COUNT_KEY, String(next));
+        return next;
+    }
+
+    function refreshCountDisplay() {
+        document.getElementById('subscriber-count-value').textContent = getSubscriberCount();
+    }
+
+    function refreshNavAccount() {
+        const slot = document.getElementById('nav-account-slot');
+        const email = getSession();
+        if (email) {
+            slot.innerHTML = '<span class="nav-account">Connecté : <strong>' + escapeHtml(email) + '</strong> · <a href="#" onclick="logout(event)">Déconnexion</a></span>';
+        } else {
+            slot.innerHTML = '<a href="#adhesion" id="nav-adhesion-link" onclick="openJoinFlow(event)">Adhérer</a>';
+        }
+    }
+
+    function escapeHtml(str) {
+        const div = document.createElement('div');
+        div.textContent = str;
+        return div.innerHTML;
+    }
+
+    // =========================
+    // GESTION DE LA MODALE
+    // =========================
+
+    let currentTab = 'login';
+
+    function openJoinFlow(evt) {
+        if (evt) evt.preventDefault();
+
+        const email = getSession();
+
+        if (email) {
+            // Déjà connecté : on confirme directement l'adhésion
+            showSuccess(
+                'Adhésion confirmée',
+                'Vous êtes connecté en tant que ' + email + '. Votre adhésion est enregistrée dans le compteur d\'adhérents.'
+            );
+            return;
+        }
+
+        document.getElementById('modal-auth-view').style.display = 'block';
+        document.getElementById('modal-success-view').style.display = 'none';
+        document.getElementById('modal-error').classList.remove('show');
+        document.getElementById('auth-form').reset();
+        switchTab('login');
+        document.getElementById('auth-modal').classList.add('open');
+    }
+
+    function closeModal() {
+        document.getElementById('auth-modal').classList.remove('open');
+    }
+
+    function switchTab(tab) {
+        currentTab = tab;
+        document.getElementById('tab-login').classList.toggle('active', tab === 'login');
+        document.getElementById('tab-register').classList.toggle('active', tab === 'register');
+        document.getElementById('auth-submit-btn').textContent = tab === 'login' ? 'Se connecter' : 'Créer mon compte et adhérer';
+        document.getElementById('modal-error').classList.remove('show');
+    }
+
+    function showError(msg) {
+        const err = document.getElementById('modal-error');
+        err.textContent = msg;
+        err.classList.add('show');
+    }
+
+    function showSuccess(title, text) {
+        document.getElementById('modal-auth-view').style.display = 'none';
+        document.getElementById('modal-success-view').style.display = 'block';
+        document.getElementById('modal-success-title').textContent = title;
+        document.getElementById('modal-success-text').textContent = text;
+        document.getElementById('auth-modal').classList.add('open');
+    }
+
+    function handleAuthSubmit(evt) {
+        evt.preventDefault();
+
+        const email = document.getElementById('auth-email').value.trim().toLowerCase();
+        const password = document.getElementById('auth-password').value;
+        const accounts = getAccounts();
+
+        if (currentTab === 'register') {
+
+            if (accounts[email]) {
+                showError('Un compte existe déjà avec cette adresse e-mail. Utilisez plutôt l\'onglet Connexion.');
+                return;
+            }
+
+            accounts[email] = { password: password, member: true };
+            saveAccounts(accounts);
+            setSession(email);
+            const total = incrementSubscriberCount();
+            refreshCountDisplay();
+            refreshNavAccount();
+            showSuccess('Bienvenue au P.A.F. !', 'Votre compte a été créé et votre adhésion enregistrée. Vous êtes l\'adhérent n°' + total + '.');
+
+        } else {
+
+            const account = accounts[email];
+
+            if (!account || account.password !== password) {
+                showError('E-mail ou mot de passe incorrect.');
+                return;
+            }
+
+            setSession(email);
+            refreshNavAccount();
+
+            if (!account.countedAsMember) {
+                account.countedAsMember = true;
+                saveAccounts(accounts);
+                const total = incrementSubscriberCount();
+                refreshCountDisplay();
+                showSuccess('Adhésion confirmée', 'Merci ! Votre adhésion est enregistrée. Vous êtes l\'adhérent n°' + total + '.');
+            } else {
+                showSuccess('Bon retour parmi nous', 'Vous êtes connecté en tant que ' + email + '. Votre adhésion est déjà enregistrée.');
+            }
+        }
+    }
+
+    function logout(evt) {
+        if (evt) evt.preventDefault();
+        clearSession();
+        refreshNavAccount();
+    }
+
+    document.getElementById('auth-modal').addEventListener('click', function (e) {
+        if (e.target === this) closeModal();
+    });
+
+    // Init
+    refreshCountDisplay();
+    refreshNavAccount();
+
+</script>
 
 
 </body>
