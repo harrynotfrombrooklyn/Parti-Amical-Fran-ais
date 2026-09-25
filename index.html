@@ -1828,10 +1828,6 @@
 
 </body>
 </html>
-<!-- =========================
-     PROPOSER UNE IDÉE
-========================= -->
-
 <section id="idees">
 
     <h2 class="section-title">
@@ -1846,7 +1842,8 @@
     <div class="community-card">
 
         <form
-            onsubmit="sendIdea(event)"
+            action="https://formspree.io/f/TON_IDENTIFIANT"
+            method="POST"
         >
 
             <div class="field">
@@ -1858,6 +1855,7 @@
                 <input
                     type="text"
                     id="idea-name"
+                    name="nom"
                     placeholder="Votre nom ou pseudonyme"
                     maxlength="50"
                     required
@@ -1868,14 +1866,32 @@
 
             <div class="field">
 
+                <label for="idea-email">
+                    Votre adresse e-mail
+                </label>
+
+                <input
+                    type="email"
+                    id="idea-email"
+                    name="email"
+                    placeholder="vous@exemple.fr"
+                    required
+                >
+
+            </div>
+
+
+            <div class="field">
+
                 <label for="idea-title">
-                    Sujet de l'idée
+                    Sujet
                 </label>
 
                 <input
                     type="text"
                     id="idea-title"
-                    placeholder="Ex : Organiser une réunion..."
+                    name="sujet"
+                    placeholder="Sujet de votre idée"
                     maxlength="100"
                     required
                 >
@@ -1891,6 +1907,7 @@
 
                 <textarea
                     id="idea-message"
+                    name="message"
                     placeholder="Décrivez votre idée..."
                     maxlength="2000"
                     required
