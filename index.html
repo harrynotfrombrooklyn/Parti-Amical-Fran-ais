@@ -669,6 +669,41 @@
 
 
         /* =========================
+           IDEE / CONTACT
+        ========================= */
+
+        .community-card {
+            padding: 35px;
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        .idea-icon {
+            font-size: 36px;
+            margin-bottom: 15px;
+        }
+
+        .email-address {
+            display: inline-block;
+            margin: 15px 0;
+            padding: 10px 16px;
+            background: #1c1c1c;
+            border: 1px solid var(--border);
+            border-radius: 5px;
+            font-size: 14px;
+            color: var(--grey);
+        }
+
+        .idea-note {
+            margin-top: 15px;
+            font-size: 13px;
+            color: var(--grey);
+        }
+
+
+        /* =========================
            MOBILE
         ========================= */
 
@@ -748,7 +783,7 @@
         </li>
 
         <li id="nav-account-slot">
-            <a
+            
                 href="#adhesion"
                 onclick="openJoinFlow(event)"
             >
@@ -785,7 +820,7 @@
 
     <div class="buttons">
 
-        <a
+        
             href="#positions"
             class="button"
         >
@@ -835,26 +870,6 @@
 
             <p>
                 Défense de la liberté d'expression et démocratique des élèves.
-            </p>
-
-        </article>
-
-
-        <article class="card">
-
-            <div class="card-icon">
-                🌱
-            </div>
-
-            <h3>
-                Soutiens
-            </h3>
-
-            <p>
-                Le P.A.F. présente notamment
-                son soutien à Jean-Luc Mélenchon
-                ainsi que sa solidarité avec
-                la population palestinienne.
             </p>
 
         </article>
@@ -923,6 +938,11 @@
             Son projet repose surtout sur la participation des lycéens et collègiens aux évenements et choix démocratiques et politiques.
         </p>
 
+        <p>
+            Chaque candidat a son propre combat, politiquement parlant :
+            le P.A.F. n'est qu'un rassemblement des délégués de France.
+        </p>
+
     </div>
 
 </section>
@@ -945,34 +965,21 @@
 
         <div class="support-box">
 
-            <span class="support-label">
-                SOUTIEN DÉCLARÉ DU P.A.F.
-            </span>
-
             <p>
-                Consultez directement les sites
-                officiels pour connaître leurs
-                publications et leurs positions.
+                Consultez directement le site
+                officiel pour connaître ses
+                publications et ses positions.
             </p>
 
             <div class="buttons">
 
-                <a
+                
                     href="https://melenchon.fr/"
                     target="_blank"
                     rel="noopener noreferrer"
                     class="button"
                 >
                     Site de Jean-Luc Mélenchon
-                </a>
-
-                <a
-                    href="https://lafranceinsoumise.fr/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="button button-outline"
-                >
-                    La France insoumise
                 </a>
 
             </div>
@@ -1006,7 +1013,7 @@
             des droits fondamentaux des civils.
         </p>
 
-        <a
+        
             href="https://www.france-palestine.org/"
             target="_blank"
             rel="noopener noreferrer"
@@ -1037,7 +1044,7 @@
     <div class="links">
 
 
-        <a
+        
             class="link"
             href="https://melenchon.fr/"
             target="_blank"
@@ -1055,25 +1062,7 @@
         </a>
 
 
-        <a
-            class="link"
-            href="https://lafranceinsoumise.fr/"
-            target="_blank"
-            rel="noopener noreferrer"
-        >
-
-            <span>
-                La France insoumise
-            </span>
-
-            <span class="arrow">
-                →
-            </span>
-
-        </a>
-
-
-        <a
+        
             class="link"
             href="https://www.france-palestine.org/"
             target="_blank"
@@ -1139,6 +1128,57 @@
             adhérent(s) enregistré(s)
 
         </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     PROPOSER UNE IDÉE
+========================= -->
+
+<section id="idees">
+
+    <h2 class="section-title">
+        Une <span>idée</span> ?
+    </h2>
+
+    <p class="section-intro">
+        Vous avez une idée, une proposition ou une suggestion
+        pour le P.A.F. ? Contactez directement l'équipe.
+    </p>
+
+    <div class="community-card idea-card">
+
+        <div class="idea-icon">
+            ✉️
+        </div>
+
+        <h3>
+            Envoyer une proposition
+        </h3>
+
+        <p>
+            Pour proposer une idée, envoyer une suggestion, devenir délégué représentant du P.A.F dans votre lycée / collège
+            ou simplement contacter l'équipe :
+        </p>
+
+        <div class="email-address">
+            partiamicalfrancais@gmail.com
+        </div>
+
+        
+            href="mailto:partiamicalfrancais@gmail.com?subject=Proposition%20d'idée%20-%20P.A.F."
+            class="button"
+        >
+            ✉️ Envoyer un e-mail
+        </a>
+
+        <p class="idea-note">
+            Votre logiciel de messagerie s'ouvrira automatiquement
+            avec l'adresse du P.A.F. déjà renseignée.
+        </p>
 
     </div>
 
@@ -1459,7 +1499,7 @@
                     Connecté :
                     <strong>${escapeHtml(email)}</strong>
                     ·
-                    <a
+                    
                         href="#"
                         onclick="logout(event)"
                     >
@@ -1471,7 +1511,7 @@
         } else {
 
             slot.innerHTML = `
-                <a
+                
                     href="#adhesion"
                     onclick="openJoinFlow(event)"
                 >
@@ -1828,52 +1868,3 @@
 
 </body>
 </html>
-<!-- =========================
-     PROPOSER UNE IDÉE
-========================= -->
-
-<section id="idees">
-
-    <h2 class="section-title">
-        Une <span>idée</span> ?
-    </h2>
-
-    <p class="section-intro">
-        Vous avez une idée, une proposition ou une suggestion
-        pour le P.A.F. ? Contactez directement l'équipe.
-    </p>
-
-    <div class="community-card idea-card">
-
-        <div class="idea-icon">
-            ✉️
-        </div>
-
-        <h3>
-            Envoyer une proposition
-        </h3>
-
-        <p>
-            Pour proposer une idée, envoyer une suggestion, devenir délégué représentant du P.A.F dans votre lycée / collège
-            ou simplement contacter l'équipe :
-        </p>
-
-        <div class="email-address">
-            partiamicalfrancais@gmail.com
-        </div>
-
-        <a
-            href="mailto:partiamicalfrancais@gmail.com?subject=Proposition%20d'idée%20-%20P.A.F."
-            class="button"
-        >
-            ✉️ Envoyer un e-mail
-        </a>
-
-        <p class="idea-note">
-            Votre logiciel de messagerie s'ouvrira automatiquement
-            avec l'adresse du P.A.F. déjà renseignée.
-        </p>
-
-    </div>
-
-</section>
